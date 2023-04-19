@@ -44,7 +44,7 @@ class _SplashViewState extends State<SplashView> {
               SpinPerfect(
                   spins: 3,
                   duration: durationTime,
-                  child: Image.asset(ImageConstants.appLogo)),
+                  child: Image.asset(ImageConstants.appLogo, scale: 2)),
               FadeIn(
                 duration: durationTime,
                 child: RichText(

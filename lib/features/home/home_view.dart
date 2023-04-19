@@ -14,16 +14,19 @@ class _HomeViewState extends State<HomeView> {
   int selectPage = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PageView(children: const [HistoryView(), ChatView()]),
-      bottomNavigationBar: NavigationBar(
-          selectedIndex: selectPage,
-          onDestinationSelected: (value) => setState(() => selectPage = value),
-          destinations: const [
-            NavigationDestination(
-                icon: Icon(Icons.access_time_outlined), label: 'History'),
-            NavigationDestination(icon: Icon(Icons.voice_chat), label: 'Chat')
-          ]),
+    return SafeArea(
+      child: Scaffold(
+        body: PageView(children: const [HistoryView(), ChatView()]),
+        bottomNavigationBar: NavigationBar(
+            selectedIndex: selectPage,
+            onDestinationSelected: (value) =>
+                setState(() => selectPage = value),
+            destinations: const [
+              NavigationDestination(
+                  icon: Icon(Icons.access_time_outlined), label: 'History'),
+              NavigationDestination(icon: Icon(Icons.voice_chat), label: 'Chat')
+            ]),
+      ),
     );
   }
 }
