@@ -9,22 +9,119 @@ environment:
   sdk: ">=2.19.0 <3.0.0"
 
 dependencies:
-  animate_do: ^3.0.2
-  animated_text_kit: ^4.2.2
-  cupertino_icons: ^1.0.2
-  dio: ^5.1.1
   flutter:
     sdk: flutter
-  flutter_tts: ^3.6.3
-  speech_to_text: ^6.1.1
+
+  # [[State Management]]
+  flutter_bloc:
+  # get:
+  # riverpod:
+
+  # [[Route]]
+  auto_route:
+  # go_route:
+
+  # [[Cache / LocalDB]]
+  hive_flutter: ^1.1.0
+  # sqflite:
+  # get_storage:
+
+  # [[RemoteDB]]
+  ## [Firebase]
+  # firebase_core:
+  # firebase_auth:
+  # firebase_storage:
+  # firebase_messaging:
+
+  ## [Supabase]
+  # supabase_flutter:
+
+  # [[Network]]
+  dio:
+  # http:
+  connectivity_plus:
+  cached_network_image:
+
+  # [[Geolocation]]
+  geolocator:
+
+  # [[Permission]]
+  permission_handler:
+
+  # [[Notification]]
+  flutter_local_notifications:
+  # awesome_notifications:
+
+  # [[Localization]]
+  easy_localization:
+
+  # [[Animations / Image /UI]]
+  lottie:
+  shimmer:
+  # animations:
+  # fl_chart:
+  flutter_svg:
+  settings_ui:
+  # photo_view:
+  animate_do:
+  # gradient_borders:
+  # flutter_native_splash:
+  # smooth_page_indicator:
+
+  # [[Utilities]]
+  kartal:
+  pinput:
+  # crypto:
+  # equatable:
+  # local_auth:
+  # url_launcher:
+  # image_picker:
+  device_preview:
+  # qr_code_scanner:
+  # package_info_plus:
+  font_awesome_flutter:
+
+  # [[Generate DataClass]]
+  freezed:
+  json_annotation:
+  freezed_annotation:
+
+  # Map
+  google_maps_flutter:
+  google_maps_flutter_web:
+  #flutter_map:
+
+  # [[Other]]
+  cupertino_icons:
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  auto_route_generator:
+  build_runner:
+  flutter_lints:
   flutter_test:
     sdk: flutter
+  hive_generator:
+  json_serializable:
 
 flutter:
   uses-material-design: true
 
   assets:
+    - assets/fonts/
     - assets/images/
+    - assets/jsons/
+    - assets/lang/
+    - assets/lotties/
+    - assets/ss/
+    - assets/svg/
+
+  # Add Custom Fonts
+  # fonts:
+  #   - family: Montserrat
+  #     fonts:
+  #       - asset: assets/fonts/Montserrat-Black.ttf
+  #       - asset: assets/fonts/Montserrat-Bold.ttf
+  #       - asset: assets/fonts/Montserrat-Light.ttf
+  #       - asset: assets/fonts/Montserrat-Medium.ttf
+  #       - asset: assets/fonts/Montserrat-Regular.ttf
+  #       - asset: assets/fonts/Montserrat-SemiBold.ttf

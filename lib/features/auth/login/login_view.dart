@@ -1,4 +1,8 @@
+import 'package:ai_app/core/constants/app_routes_constant.dart';
 import 'package:ai_app/core/extensions/context_extension.dart';
+import 'package:ai_app/core/init/routes/app_router.dart';
+import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +12,7 @@ import '../widgets/custom_filled_button.dart';
 import '../widgets/custom_filled_icon_button.dart';
 import '../widgets/custom_textfield.dart';
 
+@RoutePage()
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -19,7 +24,8 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     late TapGestureRecognizer tapRecognizer;
-    tapRecognizer = TapGestureRecognizer()..onTap = _handleTap;
+    tapRecognizer = TapGestureRecognizer()
+      ..onTap = () => context.router.pushNamed(RegisterRoute.name);
 
     return Scaffold(
         body: Stack(children: [
@@ -65,7 +71,8 @@ class _LoginViewState extends State<LoginView> {
           CustomFilledButton(
               text: 'Continue',
               // todo: login function
-              onPress: () => Navigator.pushNamed(context, '/home')),
+              onPress: () => context.router
+                  .replaceNamed(AppRoutesConstant.routeDashboard)),
           context.smallVerticalPadding,
           _changeSignInUp(context, tapRecognizer),
           context.smallVerticalPadding,
@@ -117,9 +124,6 @@ class _LoginViewState extends State<LoginView> {
                   ?.copyWith(color: ColorConstants.myDarkGreen)),
         ]));
   }
-
-  Future<Object?> _handleTap() async =>
-      await Navigator.pushNamed(context, '/register');
 
   Column _logo() {
     return Column(

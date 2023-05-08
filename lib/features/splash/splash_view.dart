@@ -1,11 +1,16 @@
+import 'package:ai_app/core/constants/app_routes_constant.dart';
+import 'package:ai_app/core/init/routes/app_router.dart';
 import 'package:ai_app/features/auth/login/login_view.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../core/constants/color_constants.dart';
 import '../../core/constants/image_constant.dart';
 
+@RoutePage()
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
@@ -24,10 +29,7 @@ class _SplashViewState extends State<SplashView> {
 
   Future<void> controlAuth(Duration duration) async {
     await Future.delayed(duration).then((value) {
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => const LoginView()),
-          (route) => false);
+      context.router.replaceNamed(AppRoutesConstant.routeAuthLogin);
     });
   }
 
