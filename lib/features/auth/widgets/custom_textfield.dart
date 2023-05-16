@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/color_constants.dart';
 import '../../../core/extensions/context_extension.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -16,12 +15,9 @@ class CustomTextField extends StatelessWidget {
       child: TextFormField(
         textAlignVertical: TextAlignVertical.center,
         decoration: const InputDecoration(
-            contentPadding: EdgeInsets.all(8),
-            hintText: 'Email Address',
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: ColorConstants.myWhite)),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: ColorConstants.myGreen))),
+          contentPadding: EdgeInsets.all(8),
+          hintText: 'Email Address',
+        ),
       ),
     );
   }

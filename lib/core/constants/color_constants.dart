@@ -11,4 +11,5 @@ class ColorConstants {
   static const Color myMediumGrey = Color(0xff3b3b41);
   static const Color myRed = Color(0xffb04141);
   static const Color myBlue = Color(0xff5880ee);
+  static const Color myTransparent = Colors.transparent;
 }

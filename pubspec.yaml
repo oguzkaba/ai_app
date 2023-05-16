@@ -6,7 +6,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -76,6 +76,8 @@ dependencies:
   # local_auth:
   # url_launcher:
   # image_picker:
+  chat_gpt_sdk:
+  flutter_dotenv:
   device_preview:
   # qr_code_scanner:
   # package_info_plus:
@@ -109,11 +111,12 @@ flutter:
   assets:
     - assets/fonts/
     - assets/images/
-    - assets/jsons/
-    - assets/lang/
-    - assets/lotties/
-    - assets/ss/
-    - assets/svg/
+    # - assets/jsons/
+    # - assets/lang/
+    # - assets/lotties/
+    # - assets/ss/
+    # - assets/svg/
+    - .env
 
   # Add Custom Fonts
   # fonts:

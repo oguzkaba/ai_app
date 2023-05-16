@@ -1,8 +1,5 @@
 import 'package:ai_app/core/constants/app_routes_constant.dart';
-import 'package:ai_app/core/init/routes/app_router.dart';
-import 'package:ai_app/features/auth/login/login_view.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

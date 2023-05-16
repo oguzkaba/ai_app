@@ -14,6 +14,9 @@ class _DashboardViewState extends State<DashboardView> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
+      appBarBuilder: (context, tabsRouter) => AppBar(
+        title: Text(tabsRouter.activeIndex == 0 ? 'History' : 'AI Chat'),
+      ),
       routes: const [HistoryRoute(), ChatRoute()],
       bottomNavigationBuilder: (context, tabsRouter) => NavigationBar(
           selectedIndex: tabsRouter.activeIndex,
